@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Edit Teacher</title>
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+	integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+	crossorigin="anonymous">
+</head>
+<body>
+	<div class = "container">
+		<div class = "row">
+			<div class ="col-lg-6 col-md-6 col-sm-6 container justify-content-center card">
+				<h1 class = "text-center"> Update teacher </h1>
+				<div class = "card-body">
+					<form th:action="@{/teacherList/{id} (id=${teacher.id})}" th:object = "${teacher}" method="POST">
+						<div class ="form-group">
+							<label> Teacher First Name </label>
+							<input
+							type = "text"
+							name = "firstName"
+							th:field = "*{fname}"
+							class = "form-control"
+							placeholder="Enter teacher First Name" 
+							/>
+						</div>
+						
+						<div class ="form-group">
+							<label> Teacher Last Name </label>
+							<input
+							type = "text"
+							name = "lastName"
+							th:field = "*{sname}"
+							class = "form-control"
+							placeholder="Enter teacher Last Name" 
+							/>
+						</div>
+						
+						<div class ="form-group">
+							<label> Teacher Email </label>
+							<input
+							type = "text"
+							name = "email"
+							th:field = "*{email}"
+							class = "form-control"
+							placeholder="Enter teacher Email" 
+							/>
+						</div>
+						
+						<div class ="form-group">
+							<label> Teacher Password </label>
+							<input
+							type = "password"
+							name = "password"
+							th:field = "*{password}"
+							class = "form-control"
+							placeholder="Enter teacher password" 
+							/>
+						</div>
+						<div class = "box-footer">
+							<button type="submit" class = "btn btn-primary">
+								Submit
+							</button>
+						</div>
+					</form>
+				
+				</div>
+			</div>
+		</div>
+		<div class="redictpg"><br><br>
+		    <p>Back to the <a href="/">homepage</a></p><br><br>
+		</div>
+	</div>
+</body>
+</html>

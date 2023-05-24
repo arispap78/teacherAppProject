@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>SEARCH A TEACHER</title>
+<link rel="stylesheet" href="/css/teacherSearch.css">
+</head>
+<body>
+	<div class="container-background">
+		<div class="container">
+			<h1><span><b>Search a Teacher</b></span></h1>		    
+		    <hr>
+		    <form action="teacherSearch" method="post" >
+		    <h2><span><b>Search a teacher by ID</b></span></h2>
+			<div class="row">			
+		    <label for="teacherId"></label>
+			<input type="text" placeholder="Enter ID" id="teacherId" name="teacherId" >
+			<button type="submit" class="idbtn">Search Teacher</button><br><br>
+			</div>
+			</form>
+			<form action="/teacherSearch/surname"  method="POST">
+			<h2><span><b>Search a teacher by Surname</b></span></h2>
+			<div class="row">
+		    <label for="surname"></label>
+			<input type="text" placeholder="Enter Surname" id="surname" name="surname" >
+			<button type="submit" class="snamebtn">Search Teacher</button>
+			</div>
+		   
+		    <hr>
+		    <div class="redictpg"><br><br>
+		    <p>Back to the <a href="/">homepage</a></p><br><br>
+			</div>
+			</form>
+		 </div> 
+ 	</div>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Registration Form</title>
+<link rel="stylesheet" href="/css/login.css">
+</head>
+<body>
+<div class="container-background">
+	<div class="container">
+		<h1><span><b>Login Form</b></span></h1>
+	    <p>Please fill in this form to login!</p>
+	    <hr>
+	    <form action="login" method="post" >
+		<div class="row">
+	    <label for="email"><b>Email</b></label>
+	    <input type="text" placeholder="Enter email" name="email" autofocus id="email" required>
+		</div>
+		<div class="row">
+	    <label for="password"><b>Password</b></label>
+	    <input type="password" placeholder="Enter Password" name="password"  id="password" required>
+		</div>
+	   
+	    <hr>
+	    <div class="signin">
+	    <p>Forgot <a href="#">password or username?</a></p><br><br>
+		</div>
+		
+	    <button type="submit" class="loginbtn"><b>Login</b></button><br><br>
+	 
+	  
+	  	<div class="signin">
+	    <p>Don't have an account? <a href="/register">Sign up</a>.</p><br><br>
+		</div>
+		
+		<div class="redictpg"><br><br>
+		    <p>Back to the <a href="/">homepage</a></p><br><br>
+		</div>
+	
+	 </div> 
+ </div>
+</body>
+</html>

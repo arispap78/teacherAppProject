@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html xmlns="http://www/w3.org/1999/xhtml" 
+		xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Teacher Management</title>
+<link rel="stylesheet" 
+href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" 
+integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" 
+crossorigin="anonymous">
+</head>
+<body>
+	<div class="container">
+		<div class="row">
+			<h1>List of Teachers</h1>
+		</div>
+			<table class="table table-striped table-bordered">
+				<thead class="table-blue">
+					<tr>
+						<th> Last Name</th>	
+						<th> First Name</th>	
+						<th> Email</th>	
+						<th> Actions</th>					
+					</tr>
+				</thead>
+				<tbody>
+					<tr th:each="teacher:${teachers}">
+						<td th:text="${teacher.sname}">	</td>
+						<td th:text="${teacher.fname}"></td>
+						<td th:text="${teacher.email}"></td>
+						<td>
+							<a th:href = "@{/teacherList/edit/{id}(id=${teacher.id})}"
+							 class = "btn btn-primary">Update</a>
+							
+							<a th:href = "@{/teacherList/{id}(id=${teacher.id})}"
+							 class = "btn btn-danger">Delete</a>
+						</td>			
+					</tr>
+				<tbody>
+			</table><br>
+			<div class="redictpg"><br><br>
+		    <p>Back to the <a href="/">homepage</a></p><br><br>
+			</div>
+	</div>
+</body>
+</html>
