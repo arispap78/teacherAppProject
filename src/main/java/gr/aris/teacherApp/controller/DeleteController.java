@@ -22,9 +22,9 @@ public class DeleteController
 	private ITeacherService teacherService = new TeacherServiceImpl(teacherDAO);
 
 	@GetMapping("/teacherList/{id}")
-	public String deleteStudent(@PathVariable String id/*, Model model*/) throws SQLException, TeacherNotFoundException 
+	public String deleteStudent(@PathVariable String id) throws SQLException, TeacherNotFoundException 
 	{
-		/*model.addAttribute("teacher", */Teacher teacher=teacherService.getTeachersById(id);
+		Teacher teacher=teacherService.getTeachersById(id);
 		try {
 			teacherDAO.delete(teacher);
 		} catch (SQLException e) {
